@@ -41,3 +41,11 @@ spec:
     name: frontend-apac
     weight: 100
   wildcardPolicy: None
+
+
+kind: Kustomization
+
+bases:
+  - ../../base
+resources:
+nameSuffix: -emea
