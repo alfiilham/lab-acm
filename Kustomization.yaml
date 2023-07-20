@@ -5,3 +5,14 @@ resources:
 - deployment.yaml
 - service.yaml
 - service-frontend.yaml
+
+mkdir -p overlays/{apac,emea}
+
+kind: Kustomization
+
+bases:
+  - ../../base
+
+nameSuffix: -apac
+
+kubectl kustomize overlays/apac/
