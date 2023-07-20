@@ -16,3 +16,5 @@ bases:
 nameSuffix: -apac
 
 kubectl kustomize overlays/apac/
+
+git remote set-url origin git@github.com:alfiilham03/DO480-apps.git
