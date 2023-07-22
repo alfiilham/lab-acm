@@ -75,3 +75,9 @@ spec:
 
 resources:
 - route-mng.yaml
+
+
+oc create secret generic \
+   --from-file config.yaml=./config.yaml \
+   --from-file ldap.crt=./ldap.crt init-config-bundle-secret \
+   -n registry
