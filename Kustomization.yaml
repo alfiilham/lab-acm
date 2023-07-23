@@ -81,3 +81,6 @@ oc create secret generic \
    --from-file config.yaml=./config.yaml \
    --from-file ldap.crt=./ldap.crt init-config-bundle-secret \
    -n registry
+
+podman push localhost/budget-app:development \
+  central-quay-registry.apps.ocp4.example.com/finance/budget-app-dev
