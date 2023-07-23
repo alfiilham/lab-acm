@@ -84,3 +84,6 @@ oc create secret generic \
 
 podman push localhost/budget-app:development \
   central-quay-registry.apps.ocp4.example.com/finance/budget-app-dev
+  
+FROM registry.access.redhat.com/ubi8/httpd-24:1
+RUN echo hello >/var/www/html/index.html
