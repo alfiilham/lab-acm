@@ -87,3 +87,6 @@ podman push localhost/budget-app:development \
   
 FROM registry.access.redhat.com/ubi8/httpd-24:1
 RUN echo hello >/var/www/html/index.html
+
+oc -n stackrox get secret central-htpasswd \
+-o go-template='{{index .data "password" | base64decode}}'
